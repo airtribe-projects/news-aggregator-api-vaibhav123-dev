@@ -17,7 +17,7 @@ const getNews = async (req, res) => {
 
     return res
       .status(200)
-      .json({ message: "News fetch succesfully", articles });
+      .json({ message: "News fetch succesfully", news: articles });
   } catch (error) {
     return res
       .status(500)
