@@ -55,7 +55,7 @@ const registerUser = async (req, res) => {
 
   users.push(user);
   return res
-    .status(201)
+    .status(200)
     .json({ message: "User registered successfully", user });
 };
 
