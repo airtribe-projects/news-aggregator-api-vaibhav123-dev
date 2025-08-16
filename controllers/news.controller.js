@@ -17,7 +17,7 @@ const getNews = async (req, res) => {
 
     return res
       .status(200)
-      .json({ message: "News fetch succesfully", news: articles });
+      .json({ message: "News fetch successfully", news: articles });
   } catch (error) {
     return res
       .status(500)
@@ -28,3 +28,4 @@ const getNews = async (req, res) => {
 module.exports = {
   getNews,
 };
+

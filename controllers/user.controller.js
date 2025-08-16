@@ -1,6 +1,7 @@
 const { hashPassword, comparePassword } = require("../utils/passwordHandler");
 const jwt = require("jsonwebtoken");
 const { users } = require("../user.json");
+require("dotenv").config();
 
 const registerUser = async (req, res) => {
   const { name, email, password, preferences } = req.body;
@@ -11,16 +12,18 @@ const registerUser = async (req, res) => {
       .json({ message: "Email, password and name are required" });
   }
 
-  if(typeof name !== 'string' || name.trim() === '') {
+  if (typeof name !== "string" || name.trim() === "") {
     return res.status(400).json({ message: "Name must be a non-empty string" });
   }
 
-  if (typeof preferences !== 'undefined' && !Array.isArray(preferences)) {
+  if (typeof preferences !== "undefined" && !Array.isArray(preferences)) {
     return res.status(400).json({ message: "Preferences must be an list" });
   }
-  
+
   if (name.length < 3) {
-    return res.status(400).json({ message: "Name must be at least 3 characters long" });
+    return res
+      .status(400)
+      .json({ message: "Name must be at least 3 characters long" });
   }
 
   if (password.length < 6) {
@@ -113,7 +116,7 @@ const updateUserPreferences = (req, res) => {
   const { preferences } = req.body;
 
   if (!preferences || !Array.isArray(preferences)) {
-    return res.status(400).json({ message: "Preferences must be an array" });
+    return res.status(400).json({ message: "Preferences must be a array" });
   }
   const user = users.find((user) => user.id === userId);
 
@@ -121,7 +124,7 @@ const updateUserPreferences = (req, res) => {
     return res.status(404).json({ message: "User not found" });
   }
 
-  user.preferences = new Set([...user.preferences, ...preferences]);
+  user.preferences = preferences;
 
   return res.status(200).json({
     message: "Preferences updated successfully",
