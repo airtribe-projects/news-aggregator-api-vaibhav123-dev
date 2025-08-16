@@ -128,7 +128,7 @@ const updateUserPreferences = (req, res) => {
 
   return res.status(200).json({
     message: "Preferences updated successfully",
-    preferences: Array.from(user.preferences),
+    preferences: user.preferences,
   });
 };
 
