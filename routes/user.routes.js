@@ -11,3 +11,4 @@ router
   .put(verifyJWT, updateUserPreferences);
 
 module.exports = router;
+

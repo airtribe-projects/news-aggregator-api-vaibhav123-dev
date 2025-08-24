@@ -7,3 +7,4 @@ router.route("/").get(verifyJWT, getNews);
 
 module.exports = router;
 
+

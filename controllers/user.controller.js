@@ -84,17 +84,8 @@ const loginUser = async (req, res) => {
     { expiresIn: "1h" }
   );
 
-  const result = {
-    token,
-    user: {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      preferences: user.preferences,
-    },
-  };
 
-  return res.status(200).json({ message: "Login successful", result });
+  return res.status(200).json({ message: "Login successful", token });
 };
 
 const getUserPreferences = (req, res) => {
@@ -138,3 +129,4 @@ module.exports = {
   getUserPreferences,
   updateUserPreferences,
 };
+

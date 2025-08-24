@@ -1,4 +1,5 @@
 const axios = require("axios");
+require("dotenv").config();
 
 const getNews = async (req, res) => {
   const preferences = req.user.preferences;

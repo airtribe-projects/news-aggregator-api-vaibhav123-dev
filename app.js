@@ -1,7 +1,6 @@
 const express = require("express");
 const userRoutes = require("./routes/user.routes");
 const newsRoutes = require("./routes/news.routes");
-require("dotenv").config();
 const app = express();
 const port = 3000;
 
@@ -19,3 +18,4 @@ app.listen(port, (err) => {
 });
 
 module.exports = app;
+
