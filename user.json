@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Clark Kent",
+      "email": "clark_test@superman.com",
+      "password": "Krypt()n8",
+      "preferences": ["movies", "comics"]
+    },
+    {
+      "id": 2,
+      "name": "Bruce Wayne",
+      "email": "bruce@batman.com",
+      "password": "B@tCave123",
+      "preferences": ["gadgets", "martial arts"]
+    },
+    {
+      "id": 3,
+      "name": "Diana Prince",
+      "email": "diana@wonderwoman.com",
+      "password": "Am@zonian42",
+      "preferences": ["history", "combat"]
+    },
+    {
+      "id": 4,
+      "name": "Barry Allen",
+      "email": "barry@flash.com",
+      "password": "Sp33dF0rce!",
+      "preferences": ["running", "science"]
+    },
+    {
+      "id": 5,
+      "name": "Arthur Curry",
+      "email": "arthur@aquaman.com",
+      "password": "Oc3anK!ng",
+      "preferences": ["swimming", "marine life"]
+    }
+  ]
+}
