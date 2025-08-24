@@ -107,7 +107,7 @@ const updateUserPreferences = (req, res) => {
   const { preferences } = req.body;
 
   if (!preferences || !Array.isArray(preferences)) {
-    return res.status(400).json({ message: "Preferences must be a array" });
+    return res.status(400).json({ message: "Preferences must be a list" });
   }
   const user = users.find((user) => user.id === userId);
 

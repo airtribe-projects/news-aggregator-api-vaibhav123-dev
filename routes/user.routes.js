@@ -7,8 +7,9 @@ router.route("/signup").post(registerUser);
 router.route("/login").post(loginUser);
 router
   .route("/preferences")
-  .get(verifyJWT, getUserPreferences)
-  .put(verifyJWT, updateUserPreferences);
+  .all(verifyJWT)
+  .get(getUserPreferences)
+  .put(updateUserPreferences);
 
 module.exports = router;
 
